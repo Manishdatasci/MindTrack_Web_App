@@ -20,8 +20,3 @@ MindTrack/
 ├── requirements.txt  
 └── README.md  
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Manishdatasci/MindTrack.git
-   cd MindTrack
