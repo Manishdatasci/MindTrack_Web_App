@@ -11,6 +11,9 @@ MindTrack helps you track daily habits, moods, and progress. It uses a **Streaml
 - Download progress as CSV
 - Motivational messages
 
+- First Start FastAPI Server
+- uvicorn main:app --reload
+
 ## Project Structure
 MindTrack/
 ├── main.py           # Streamlit frontend  
