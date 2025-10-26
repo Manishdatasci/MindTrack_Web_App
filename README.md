@@ -1,8 +1,3 @@
-# MindTrack_Web_App
-MindTrack is a personal wellness app to track daily habits, moods, and progress. Built with FastAPI (backend) and Streamlit (frontend), it provides analytics, streak tracking, habit suggestions, motivation, and CSV download to help users stay consistent and improve mental wellness.
-
-
-# MindTrack – Personal Wellness & Habit Tracker
 
 MindTrack helps you track daily habits, moods, and progress. It uses a **Streamlit frontend** that communicates with a **FastAPI backend**. Data is stored locally in CSV format.
 
@@ -23,10 +18,3 @@ MindTrack/
 │   └── user_data.csv  
 ├── requirements.txt  
 └── README.md  
-
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Manishdatasci/MindTrack.git
-   cd MindTrack
-
