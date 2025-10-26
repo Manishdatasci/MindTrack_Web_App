@@ -1,3 +1,4 @@
+# MindTrack – Personal Wellness & Habit Tracker
 
 MindTrack helps you track daily habits, moods, and progress. It uses a **Streamlit frontend** that communicates with a **FastAPI backend**. Data is stored locally in CSV format.
 
@@ -18,3 +19,9 @@ MindTrack/
 │   └── user_data.csv  
 ├── requirements.txt  
 └── README.md  
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Manishdatasci/MindTrack.git
+   cd MindTrack
