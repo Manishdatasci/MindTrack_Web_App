@@ -17,7 +17,7 @@ def get_data():
         if response.status_code == 200:
             return pd.DataFrame(response.json())
     except:
-        st.error("❌ Could not connect to backend!")
+        st.error("Could not connect to backend!")
     return pd.DataFrame(columns=["date", "habit", "completed", "mood"])
 
 def save_progress(entries):
@@ -25,11 +25,11 @@ def save_progress(entries):
     try:
         response = requests.post(f"{BACKEND_URL}/save_progress_bulk", json=entries)
         if response.status_code == 200:
-            st.success("✅ Today's progress saved successfully!")
+            st.success("Today's progress saved successfully!")
         else:
-            st.error("❌ Failed to save progress!")
+            st.error("Failed to save progress!")
     except:
-        st.error("❌ Could not connect to backend!")
+        st.error("Could not connect to backend!")
 
 def get_motivation():
     messages = [
@@ -59,7 +59,7 @@ st.caption("Track your habits, moods, and progress every day 💖")
 
 # Daily Habit Input
 today = datetime.date.today()
-st.subheader("✅ Daily Habit Check-In")
+st.subheader("Daily Habit Check-In")
 col1, col2 = st.columns(2)
 with col1:
     selected_mood = st.radio("How are you feeling today?", ["😊 Happy", "😐 Neutral", "😔 Sad"])
@@ -131,6 +131,7 @@ st.success(get_motivation())
 # Branding
 st.markdown("---")
 st.markdown("<p style='text-align: center;'>Developed with ❤️ by <b>Manish Kumar Rajak</b></p>", unsafe_allow_html=True)
+
 
 
 
