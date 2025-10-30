@@ -6,14 +6,10 @@ import requests
 import matplotlib.pyplot as plt
 import calplot
 
-# ===================================
-#           ⚙️ Backend URL
-# ===================================
+# Backend URL
 BACKEND_URL = "http://127.0.0.1:8000"
 
-# ===================================
-#        🔧 Helper Functions
-# ===================================
+# Helper Functions
 def get_data():
     """Fetch data from backend"""
     try:
@@ -56,16 +52,12 @@ def suggest_habits(df):
     else:
         return "Great consistency! Maybe add a new habit like Stretching or Gratitude 🌟"
 
-# ===================================
-#        🎨 Page Layout
-# ===================================
+# Page Layout
 st.set_page_config(page_title="MindTrack", page_icon="🧠", layout="wide")
 st.title("🧠 MindTrack – Personal Wellness & Habit Tracker")
 st.caption("Track your habits, moods, and progress every day 💖")
 
-# ===================================
-#       🧩 Daily Habit Input
-# ===================================
+# Daily Habit Input
 today = datetime.date.today()
 st.subheader("✅ Daily Habit Check-In")
 col1, col2 = st.columns(2)
@@ -87,11 +79,9 @@ if st.button("💾 Save Today's Progress"):
             "completed": habit in completed_habits,
             "mood": selected_mood
         })
-    save_progress(entries)  # ✅ single request to backend
+    save_progress(entries)  
 
-# ===================================
-#       📊 Analytics Section
-# ===================================
+# Analytics Section
 st.markdown("---")
 st.subheader("📈 Your Progress Analytics")
 
@@ -128,24 +118,19 @@ if not df.empty:
 else:
     st.info("No data yet! Start tracking your habits today.")
 
-# ===================================
-#       🤖 AI Habit Suggestion
-# ===================================
+# AI Habit Suggestion
 st.markdown("---")
 st.subheader("🤖 Habit Suggestions")
 st.success(suggest_habits(df))
 
-# ===================================
-#       💬 Daily Motivation
-# ===================================
+# Daily Motivation
 st.markdown("---")
 st.subheader("💬 Daily Motivation")
 st.success(get_motivation())
 
-# ===================================
-#            👨‍💻 Branding
-# ===================================
+# Branding
 st.markdown("---")
 st.markdown("<p style='text-align: center;'>Developed with ❤️ by <b>Manish Kumar Rajak</b></p>", unsafe_allow_html=True)
+
 
 
